@@ -453,7 +453,7 @@ esp_eth_phy_t *esp_eth_phy_new_lan8720(const eth_phy_config_t *config)
     phy_lan8720_t *lan8720 = calloc(1, sizeof(phy_lan8720_t));
     PHY_CHECK(lan8720, "calloc lan8720 failed", err);
     lan8720->addr = config->phy_addr;
-    lan8720->reset_gpio_num = config->reset_gpio_num;
+    lan8720->reset_gpio_num = 16;
     lan8720->reset_timeout_ms = config->reset_timeout_ms;
     lan8720->link_status = ETH_LINK_DOWN;
     lan8720->autonego_timeout_ms = config->autonego_timeout_ms;
